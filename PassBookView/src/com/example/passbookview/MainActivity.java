@@ -53,7 +53,6 @@ public class MainActivity extends Activity {
 
 	@Override
 	public void onBackPressed() {
-		super.onBackPressed();
 		if ( this.listeners.size() > 0 ) {
 			for ( OnBackPressedListener item : this.listeners ) {
 				if ( item.onBackPressed() ) {
@@ -61,5 +60,6 @@ public class MainActivity extends Activity {
 				}
 			}
 		}
+		super.onBackPressed();
 	}
 }
